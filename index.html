@@ -1,108 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bot</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            background-color: #f4f7f6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-            width: 100%;
-            max-width: 320px;
-            text-align: center;
-        }
-
-        h2 { margin-bottom: 20px; color: #333; }
-
-        .form-group { text-align: left; margin-bottom: 15px; }
-
-        label { display: block; margin-bottom: 5px; font-size: 0.8rem; color: #888; text-transform: uppercase; letter-spacing: 1px; }
-
-        input {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            box-sizing: border-box;
-            font-size: 1rem;
-        }
-
-        input:focus { outline: none; border-color: #007bff; }
-
-        button {
-            width: 100%;
-            padding: 12px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 1rem;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-
-        button:active { transform: scale(0.98); }
-
-        #status {
-            margin-top: 15px;
-            font-size: 0.9rem;
-            color: #28a745;
-            height: 20px; /* Prevents layout jump */
-        }
-    </style>
+    <title>Ishowspeed</title>
 </head>
 <body>
 
-<div class="card">
-    <h2>Bot</h2>
-    <form id="entryForm">
-        <div class="form-group">
-            <label>Game ID</label>
-            <input type="text" id="firstName" required autofocus>
-        </div>
-        <div class="form-group">
-            <label>Bot Name</label>
-            <input type="text" id="lastName" required>
-        </div>
-        <button type="submit">Enter</button>
-    </form>
-    <div id="status"></div>
-</div>
-
-<script>
-    const form = document.getElementById('entryForm');
-    const status = document.getElementById('status');
-
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const fName = document.getElementById('firstName').value;
-        const lName = document.getElementById('lastName').value;
-
-        // Visual feedback
-        status.innerText = `Saved: ${fName} ${lName}`;
-        
-        // Reset and refocus
-        form.reset();
-        document.getElementById('firstName').focus();
-
-        // Clear the message after 3 seconds
-        setTimeout(() => { status.innerText = ""; }, 3000);
-    });
-</script>
+    <img src="https://en.wikipedia.org/wiki/IShowSpeed#/media/File:IShowSpeed_at_Chinatown_(Portrait)_04.jpg" width="600" height="400">
 
 </body>
 </html>
