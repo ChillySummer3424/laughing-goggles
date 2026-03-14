@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Name Entry</title>
+    <title>Blooket Bot</title>
     <style>
         /* CSS: Making it look clean and modern */
         body {
@@ -87,51 +87,19 @@
 <body>
 
 <div class="card">
-    <h2>Add Person</h2>
+    <h2>Enter Blooket</h2>
     
     <form id="entryForm">
         <div class="form-group">
-            <label for="firstName">First Name</label>
-            <input type="text" id="firstName" placeholder="John" required>
+            <label for="firstName">Game ID</label>
         </div>
 
         <div class="form-group">
-            <label for="lastName">Last Name</label>
-            <input type="text" id="lastName" placeholder="Doe" required>
+            <label for="lastName">Name to flood</label>
         </div>
 
-        <button type="submit">Add to List</button>
+        <button type="submit">Enter</button>
     </form>
-
-    <ul id="userList">
-        </ul>
-</div>
-
-<script>
-    // JavaScript: Handling the logic
-    const form = document.getElementById('entryForm');
-    const userList = document.getElementById('userList');
-
-    form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Stop page from refreshing
-
-        // 1. Get the values from inputs
-        const fName = document.getElementById('firstName').value;
-        const lName = document.getElementById('lastName').value;
-
-        // 2. Create a new list item (li) element
-        const li = document.createElement('li');
-        li.innerHTML = `<span>${fName} <strong>${lName}</strong></span> 
-                        <span style="color: #ccc; font-size: 0.7rem;">Just now</span>`;
-
-        // 3. Add the new item to the list
-        userList.appendChild(li);
-
-        // 4. Reset the form for the next entry
-        form.reset();
-        document.getElementById('firstName').focus(); // Put cursor back in first box
-    });
 </script>
-
 </body>
 </html>
